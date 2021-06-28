@@ -22,12 +22,6 @@
   </div>
 
   <div class="field">
-    <%= f.select :customer_id, 
-    options_for_select(
-        Customer.all.map do |customer| 
-        #HERE 42
-        end
-    ) %>
     <%= f.collection_select :customer_id, Customer.all, :id, :full_name, include_blank: true  %>
   </div>
 
